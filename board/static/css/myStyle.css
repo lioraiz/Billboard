@@ -1,0 +1,154 @@
+h2.text-center.mainTitle {
+    font-family: Anton;
+    font-size: 40px;
+    color: black;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+span.col-md-2.date {
+    font-family: Poiret One;
+    font-size: 16px;
+    color: black;
+    position: absolute;
+    top: -19px;
+    background-color: white;
+    z-index: 2;
+    left: 39px;
+    padding: 8px;
+    width: 113px;
+    padding-left: 12px;
+}
+
+h4.col-md-12.title {
+    font-family: Anton;
+    font-size: 30px;
+    color: #00b7ef;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+span.col-md-12.message {
+    font-family: Arial;
+    font-size: 16px;
+    color: #c1bfc0;
+    display: block;
+}
+
+span.col-md-12.author {
+    font-family: Pinyon Script;
+    font-size: 24px;
+    color: black;
+    text-align:right;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.col-md-12.billboard {
+    color: #00b7ef;
+    max-width: 800px;
+    border: 3px solid;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.col-md-12.text-center {
+    /* margin-top: 20px; */
+}
+
+.col-md-12.noMsg {
+    font-size: 24px;
+    color: black;
+    font-family: arial;
+}
+
+.col-md-12.addWrapper.text-center {
+    margin-top: 25px;
+    border: 1px dashed black;
+    padding: 8px;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+button.btn.add {
+    background-color: #66CDAA;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+    float: none;
+}
+
+label {
+    display: none;
+}
+
+label.submitting {
+    display: inline-block;
+    background-color: #66CDAA
+}
+
+input {
+    display: block;
+    padding-left: 10px;
+    max-width: 150px;
+}
+
+textarea#id_message {
+    height: 100px;
+    width: 100%;
+    margin: 10px 0 10px 0;
+}
+
+.datenow {
+    text-align: left;
+    position: absolute;
+    top: -37px;
+    left: 28px;
+    background-color: white;
+    display: inline-block;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+form.post-form {
+    position: relative;
+}
+
+input#id_title {
+    margin-top: 20px;
+}
+
+input[type="submit"] {
+    margin: auto;
+    -webkit-appearance: none;
+    border: 0;
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.controls {
+    width: 90px;
+    height: 30px;
+    margin:auto;
+    display:inline-block;
+    font-size: 16px;
+    cursor:pointer;
+    color: white;
+}
+
+.decline {
+    background-color: red;
+}
+
+
+input#id_author {
+    margin-left: auto;
+}
+
+i.fa {
+    padding-top: 6px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Billboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Pinyon+Script|Poiret+One" rel="stylesheet">
+    <script src="https://use.fontawesome.com/2aa97357cb.js"></script>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/myStyle.css' %}" />
+</head>
+<body>
+
+<div class="container">
+<h2 class="text-center mainTitle">BILLBOARD</h2>
+
+{% if all_entries %}
+    {% for a in all_entries %}
+    <div class="col-md-12 billboard">
+        <span class="col-md-2 date">{{ a.published|date:"d/m/Y" }} </span>
+        <h4 class="col-md-12 title">{{ a.title }}</h4>
+        <span class="col-md-12 message">{{ a.message }}</span><br/>
+        <span class="col-md-12 author">{{ a.author }}</span>
+    </div>
+    {% endfor %}
+{% else %}
+<div class="col-md-12 text-center noMsg">
+    <span class="col-md-12"> No messages... <br/> Click the `+` button to add a new message </span>
+</div>
+{% endif %}
+
+<div class="col-md-12 addWrapper text-center">
+    <button class="btn add">+</button>
+<form method="POST" class="post-form" style="display:none">
+    <div class="datenow">{% now "j/m/Y" %}</div>
+                {% csrf_token %}
+    {{ new_form }}
+    <span class="controls decline"><i class="fa fa-times" aria-hidden="true"></i></span><label class="submitting controls" for="submitting"><i class="fa fa-check" aria-hidden="true"></i></label><input hidden id="submitting" class=" submit" type="submit" value="submit"></input>
+</form>
+</div>
+
+
+
+</div>
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="{% static 'js/main.js' %}" ></script>
+</body>
+</html>
